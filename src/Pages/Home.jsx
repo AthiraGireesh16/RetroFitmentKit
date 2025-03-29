@@ -17,6 +17,8 @@ import sristi from '../assets/SRISTI.gif';
 import patent from '../assets/patent.jpg';
 import arai from '../assets/arai.png';
 import keralagovt from '../assets/keralagovt.png';
+import founder from '../assets/founder.png';
+import contact from '../assets/contact.jpg';
 
 
 
@@ -280,7 +282,7 @@ const Home = () => {
   {/* Left Side - Founder Image */}
   <div className="w-full md:w-1/3 flex justify-center">
   <img
-    src="/src/assets/founder.png"
+    src={founder}
     alt="Founder"
     className="w-36 h-36 md:w-44 md:h-44 rounded-full shadow-lg object-cover object-right"
   />
@@ -323,7 +325,7 @@ const Home = () => {
         Got questions? We’re just a message away! Contact us for any assistance or inquiries.
       </p>
       <img
-        src="/src/assets/contact.jpg"
+        src={contact}
         alt="Contact Illustration"
         className="w-full h-auto"
       />
