@@ -2,7 +2,15 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-
+// Import images
+import background from "../assets/background.jpg";
+import easyInstallation from "../assets/easy-installation.png";
+import certificate from "../assets/certificate.png";
+import cost from "../assets/cost.png";
+import maintenance from "../assets/maintenance.png";
+import kitIntro from "../assets/kit-intro.png";
+import howItWorks from "../assets/how-it-works.png";
+import image3 from "../assets/image3.png";
 
 
 
@@ -44,7 +52,7 @@ const Home = () => {
   return (
     <div
       className="relative h-full w-full min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-fixed overflow-y-auto px-4 sm:px-8"
-      style={{ backgroundImage: "url('/src/assets/background.jpg')" }}
+      style={{ backgroundImage: `url(${background})` }}
     >
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-white opacity-60"></div>
@@ -83,10 +91,10 @@ const Home = () => {
         }}
       >
         {[  
-          { title: "Easy Installation", img: "/src/assets/easy-installation.png", description: "Fits any vehicle with power steering & power brakes." },
-          { title: "ARAI Certified", img: "/src/assets/certificate.png", description: "Ensures compliance with CMVR safety standards." },
-          { title: "Affordable", img: "/src/assets/cost.png", description: "Cost ranges from Rs 15,000 to Rs 40,000." },
-          { title: "Low Maintenance", img: "/src/assets/maintenance.png", description: "Requires periodic inspection every 10,000 km." },
+          { title: "Easy Installation", img: easyInstallation, description: "Fits any vehicle with power steering & power brakes." },
+          { title: "ARAI Certified", img: certificate, description: "Ensures compliance with CMVR safety standards." },
+          { title: "Affordable", img: cost, description: "Cost ranges from Rs 15,000 to Rs 40,000." },
+          { title: "Low Maintenance", img: maintenance, description: "Requires periodic inspection every 10,000 km." },
         ].map((feature, index) => (
           <motion.div
             key={index}
@@ -113,14 +121,14 @@ const Home = () => {
 
   {/* Two Images with Summary */}
   <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-    <img src="/src/assets/kit-intro.png" alt="Retrofitment Kit"  className="w-80 h-auto rounded-lg cursor-pointer shadow-lg transition-transform duration-300 transform hover:scale-120" />
+    <img src={kitIntro} alt="Retrofitment Kit"  className="w-80 h-auto rounded-lg cursor-pointer shadow-lg transition-transform duration-300 transform hover:scale-120" />
     <p className="text-lg text-gray-700 leading-relaxed text-left">
       The Retrofitment Kit is a revolutionary device designed to empower individuals with physical disabilities, allowing them to drive vehicles safely and efficiently using hand controls. This innovative system enables users to control the brake, clutch, and accelerator without relying on their legs. Designed with universal compatibility, the kit can be installed in a wide range of vehicles without the need for permanent modifications, ensuring that users can drive with ease and confidence.
     </p>
   </div>
 
   <div className="mt-6 flex flex-col sm:flex-row-reverse justify-center items-center gap-6">
-    <img src="/src/assets/how-it-works.png" alt="Hydraulic System"  className="w-80 h-auto rounded-lg cursor-pointer shadow-lg transition-transform duration-300 transform hover:scale-120" />
+    <img src={howItWorks} alt="Hydraulic System"  className="w-80 h-auto rounded-lg cursor-pointer shadow-lg transition-transform duration-300 transform hover:scale-120" />
     <p className="text-lg text-gray-700 leading-relaxed text-left">
       The system incorporates hydraulic assistance, making it effortless for users to operate the controls with minimal physical exertion. This advanced technology ensures a smooth and comfortable driving experience, significantly reducing fatigue during long journeys. The kit is also certified under CMVR (Central Motor Vehicle Rules) and ARAI (Automotive Research Association of India), making it a safe and reliable choice for individuals seeking greater independence and mobility.
     </p>
@@ -148,7 +156,7 @@ const Home = () => {
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row-reverse justify-center items-center gap-6">
-        <img src="/src/assets/image3.png" alt="Hydraulic System"  className="w-80 h-auto rounded-lg cursor-pointer shadow-lg transition-transform duration-300 transform hover:scale-120" />
+        <img src={image3} alt="Hydraulic System"  className="w-80 h-auto rounded-lg cursor-pointer shadow-lg transition-transform duration-300 transform hover:scale-120" />
         <p className="mt-4">
           The installation process is straightforward and hassle-free, requiring no permanent alterations to the vehicle. The control lever is securely mounted near the steering wheel and connected to the vehicle’s existing brake, clutch, and accelerator systems. Once installed, users can effortlessly control their vehicle using their hands, ensuring a safe and responsive driving experience.
         </p>
