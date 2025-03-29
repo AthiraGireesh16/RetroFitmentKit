@@ -6,7 +6,7 @@ export default {
           raleway: ["Raleway", "sans-serif"],
         },
         fontWeight: {
-          10: "10",
+          100 : "100"
         },
         
       },

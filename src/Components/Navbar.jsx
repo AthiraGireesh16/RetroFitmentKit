@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white fixed w-full top-0 left-0 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
-      <h1 className="text-4xl font-[10]  tracking-wide ml-6">
+      <h1 className="text-4xl font-strong  tracking-wide ml-6 ">
         RetrofitmentKit
       </h1>
 
