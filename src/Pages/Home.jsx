@@ -11,6 +11,12 @@ import maintenance from "../assets/maintenance.png";
 import kitIntro from "../assets/kit-intro.png";
 import howItWorks from "../assets/how-it-works.png";
 import image3 from "../assets/image3.png";
+import nif from '../assets/nif.avif';
+import nationalAward from '../assets/national-award.jpg';
+import sristi from '../assets/SRISTI.gif';
+import patent from '../assets/patent.jpg';
+import arai from '../assets/arai.png';
+import keralagovt from '../assets/keralagovt.png';
 
 
 
@@ -217,32 +223,32 @@ const Home = () => {
       {/* Achievement Cards */}
       {[
         {
-          img: "/src/assets/nif.avif",
+          img: nif,
           title: "National Innovation Foundation Award (2007)",
           desc: "Presented by Dr. A.P.J. Abdul Kalam for outstanding innovation."
         },
         {
-          img: "/src/assets/national-award.jpg",
+          img: nationalAward,
           title: "National Award for The Empowerment of Persons With Disabilities (2011)",
           desc: "Presented by Smt. Pratibha Devisingh Patil, awarded by the Ministry of Social Justice & Empowerment."
         },
         {
-          img: "/src/assets/SRISTI.gif",
+          img: sristi,
           title: "SRISTI Award in Craftsmanship",
           desc: "Presented by Padmashree Prof. Anil K. Gupta for innovation in craftsmanship."
         },
         {
-          img: "/src/assets/patent.jpg",
+          img: patent,
           title: "Patent for Accessible Vehicle Control System",
           desc: 'Patent for "Manually Controlled Operating System for Physically Challenged Persons to Control Four-Wheel Vehicles."'
         },
         {
-          img: "/src/assets/arai.png",
+          img: arai,
           title: "Certification by ARAI",
           desc: "Certified by The Automotive Research Association of India (ARAI) under Govt. of India standards."
         },
         {
-          img: "/src/assets/keralagovt.png",
+          img: keralagovt,
           title: "Government Authorization for Vehicle Modifications",
           desc: "Issued by the Transport Department of Kerala to modify vehicles for persons with disabilities."
         }
