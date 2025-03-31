@@ -89,7 +89,7 @@ const Home = () => {
 
   return (
     <div
-      className="relative h-full w-full min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-fixed overflow-y-auto px-4 sm:px-8"
+      className="relative h-full w-full min-h-screen flex flex-col items-center  justify-center bg-cover bg-center bg-fixed overflow-y-auto px-4 sm:px-8"
       style={{ backgroundImage: `url(${background})` }}
     >
       {/* Background Overlay */}
@@ -120,7 +120,7 @@ const Home = () => {
 
       {/* Feature Cards */}
       <motion.div
-        className="relative z-10 flex flex-wrap justify-center gap-6 px-4 py-12 w-full"
+        className="relative z-10 flex flex-wrap cursor-pointer justify-center gap-6 px-4 py-12 w-full"
         initial="hidden"
         animate="visible"
         variants={{
