@@ -27,6 +27,7 @@ const revealVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -55,6 +56,35 @@ const Home = () => {
   useEffect(() => {
     window.scrollToContact = scrollToContact;
   }, []);
+
+
+  
+  const featureData = [
+    { 
+      title: "Easy Installation", 
+      img: easyInstallation, 
+      description: "Fits any vehicle with power steering & power brakes.",
+      detailed: "This system is designed for universal compatibility and can be installed in just a few hours without any permanent modifications."
+    },
+    { 
+      title: "ARAI Certified", 
+      img: certificate, 
+      description: "Ensures compliance with CMVR safety standards.",
+      detailed: "Our kit has undergone rigorous testing to meet the highest safety standards, ensuring a secure and reliable driving experience."
+    },
+    { 
+      title: "Affordable", 
+      img: cost, 
+      description: "Cost ranges from Rs 15,000 to Rs 40,000.",
+      detailed: "Compared to other retrofit systems, our kit provides an economical yet high-quality solution for mobility assistance."
+    },
+    { 
+      title: "Low Maintenance", 
+      img: maintenance, 
+      description: "Requires periodic inspection every 10,000 km.",
+      detailed: "With durable components and easy servicing, the kit ensures long-term usability with minimal upkeep."
+    },
+  ];
   
 
   return (
@@ -98,20 +128,21 @@ const Home = () => {
           visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
         }}
       >
-        {[  
-          { title: "Easy Installation", img: easyInstallation, description: "Fits any vehicle with power steering & power brakes." },
-          { title: "ARAI Certified", img: certificate, description: "Ensures compliance with CMVR safety standards." },
-          { title: "Affordable", img: cost, description: "Cost ranges from Rs 15,000 to Rs 40,000." },
-          { title: "Low Maintenance", img: maintenance, description: "Requires periodic inspection every 10,000 km." },
-        ].map((feature, index) => (
+        {featureData.map((feature, index) => (
           <motion.div
             key={index}
-            className="bg-white p-5 rounded-lg shadow-lg text-center transition hover:scale-105 w-72 sm:w-80"
-            variants={revealVariant}
+            className="relative bg-white p-5 rounded-lg shadow-lg text-center transition w-72 sm:w-80 overflow-hidden"
+            whileHover={{ scale: 1.05 }}
           >
             <img src={feature.img} alt={feature.title} className="w-16 h-16 mx-auto mb-3" />
             <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
             <p className="text-gray-600 text-sm">{feature.description}</p>
+            
+            <motion.div
+              className="absolute inset-0 bg-white bg-opacity-90 p-5 flex items-center justify-center text-center text-gray-800 text-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+            >
+              {feature.detailed}
+            </motion.div>
           </motion.div>
         ))}
       </motion.div>
